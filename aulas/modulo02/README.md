@@ -69,7 +69,8 @@ Esse projeto foi desenvolvido usando os seguintes pacotes:
 ```
       yarn dev
 ```
-  5. Configuração do DEBUG
+  5. Configuração do DEBUG: 
+      
       A. No aba de DEBUG do VSCode, adicionar launch uma personalizada e em seguida o item Node.js no menu que abrir
       B. No arquivo launch.json, modificar o request e adicionar o protocol e restart:
 ```json
@@ -135,7 +136,8 @@ Esse projeto foi desenvolvido usando os seguintes pacotes:
 ```
   yarn eslint --init
 ```
-  3. Configuração
+  3. Configuração: 
+  
     A. How would you like to use ESLint? 
         To check syntax, find problems, and enforce code style  
     B. What type of modules does your project use? 
@@ -172,7 +174,7 @@ Esse projeto foi desenvolvido usando os seguintes pacotes:
           }
 ```
     N. Abrir o arquivo .eslintrc.js e adicionar as linhas abaixo:
-```json
+```
           rules: {
             'class-methods-use-this': 'off',
             'no-param-reassign': 'off',
@@ -181,7 +183,7 @@ Esse projeto foi desenvolvido usando os seguintes pacotes:
         },
 ```
     O. Caso não funcione, tente adicionar as linhas abaixo .eslintrc.js, salvar e remover logo em seguinda
-```json
+```
         settings: {
             "import/resolver": {
                 "babel-plugin-root-import": {
@@ -193,7 +195,7 @@ Esse projeto foi desenvolvido usando os seguintes pacotes:
 ###### PRETTIER
     1. yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
     2. Alterar .eslintrc.js (sendo que o 'airbnb-base' já deve estar adicionado no extends):
-```json
+```
             extends: [
                 'airbnb-base',
                 'prettier'
