@@ -1,7 +1,7 @@
 const express = require('express');
 const server = express();
 
-//resolver dados com json
+//permite receber requisições ou resposta no formato JSON
 server.use(express.json());
 
 const projects = [];

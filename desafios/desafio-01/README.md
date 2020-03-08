@@ -6,8 +6,10 @@
   Desafio 1: Conceitos do NodeJS
 </h3>
 
-<img alt="License" src="https://img.shields.io/badge/made%20by-danilosalvador-blue">
-<img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
+<p align="center">
+    <img alt="License" src="https://img.shields.io/badge/made%20by-danilosalvador-blue">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
+</p>
 
 ## :rocket: Desafio 01
 
@@ -50,7 +52,6 @@ Ao chamar a rota `POST /projects` repassando `{ id: 1, title: 'Novo projeto' }` 
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
-
 ---
 
-Feito com ♥ by Danilo Salvador :wave: 
+Feito com ♥ by Danilo Salvador 
