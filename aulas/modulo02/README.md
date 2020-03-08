@@ -8,9 +8,7 @@
 Um aplicativo de agendamento de barbeiro que permite aos usuários agendar uma consulta com seu barbeiro favorito e também mostrar ao barbeiro sua agenda para o dia.
 </h4>
 
-<p>
 O texto abaixo tem como objetivo documentar o passo a passo de criação de um projeto NodeJS desenvolvido no [RocketSeat GoStack Bootcamp](https://rocketseat.com.br/bootcamp).
-</p>
 
 <p align="center">
     <img alt="License" src="https://img.shields.io/badge/made%20by-danilosalvador-blue">
@@ -24,17 +22,14 @@ O texto abaixo tem como objetivo documentar o passo a passo de criação de um p
 </p>
 
 ## :rocket: Tecnologias
-
 Esse projeto foi desenvolvido usando as seguintes ferramentas
-
--  [Node.js][nodejs]
--  [VS Code][vc] with [ESLint][vceslint]
+-  [Node.js](https://nodejs.org/)
+-  [VS Code](https://code.visualstudio.com/) with [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 -  [Docker](https://www.docker.com/docker-community)
 -  [yarn](https://yarnpkg.com)
 -  [Insomnia](https://insomnia.rest/)
 
 Esse projeto foi desenvolvido usando os seguintes pacotes:
-
 -  [express](https://expressjs.com/): framework
 -  [sucrase](https://github.com/alangpierce/sucrase): permitir usar as ultimas novidades do JS no Node, como por exemplo o import (usar apenas como depedência de DESENVOLVIMENTO)
 -  [nodemon](https://nodemon.io/): atualização automática quando for feita alguma alteração no código (usar apenas como depedência de DESENVOLVIMENTO)
@@ -52,99 +47,74 @@ Esse projeto foi desenvolvido usando os seguintes pacotes:
 
 ###### SUCRASE + NODEMON
   1. Para rodar o projeto com as novas sintaxe do JS
-
 ```
       yarn sucrase nodemon -D
 ```
-
   2. Para execução com o nodemon, adicionar as linhas no package.json (o DEBUG é para permitir os breakpoints de debug):
-
-```
+```json
       "scripts": {
         "dev": "nodemon src/server.js",
         "dev:debug": "nodemon --inspect src/server.js"
       },
 ```
-
   3. Criar o arquivo nodemon.json na raíz do projeto (o parâmetro -r diz para executar antes de subir a aplicação):
-
-```
+```json
       {
         "execMap": {
           "js": "node -r sucrase/register"
         }
       }
 ```
-
   4. Rodar o projeto:
-
 ```
       yarn dev
 ```
-
   5. Configuração do DEBUG
       A. No aba de DEBUG do VSCode, adicionar launch uma personalizada e em seguida o item Node.js no menu que abrir
       B. No arquivo launch.json, modificar o request e adicionar o protocol e restart:
-
-```
+```json
         "request": "attach",
         "protocol": "inspector",
         "restart": true,
 ```
-
       D. Para executar o projeto em mode debug
-
 ```
           yarn dev:debug
-```
-          
           VSCode Debug (lateral esquerda): start
-
+```   
+          
 ###### DOCKER
   1. https://docs.docker.com/install/
   2. Comandos básicos
     A. Containers instalados:
-
 ```
         docker ps
 ```
-
     B. Todos os containers (inclusive os parados): 
-
 ```
         docker ps -a
 ```
-
     C. Parar a conteiner: 
-
 ```    
         docker stop **<container_name>**
 ```
-
     D. Iniciar o conteiner: 
-
 ```
         docker start **<container_name or container_id>**
 ```
-
     E. Log do container: 
-
 ```
         docker logs **<container_name>**
 ```
-
 ###### POSTGRES no DOCKER
   1. Confirmar versão e comandos: https://hub.docker.com/_/postgres
-
 ```
         docker pull postgres
 ```
-
   2. Terminal:
 ```
         docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
 ```
-
   3. Interface visual para conectar no Postgres: 
         Postbird: https://www.electronjs.org/apps/postbird
   4. Username: postgress
@@ -158,17 +128,13 @@ Esse projeto foi desenvolvido usando os seguintes pacotes:
 
 ###### ESLINT
   1. Instalação: 
-
 ```
   yarn add eslint -D
 ```
-
   2. Inicialização: 
-
 ```
   yarn eslint --init
 ```
-
   3. Configuração
     A. How would you like to use ESLint? 
         To check syntax, find problems, and enforce code style  
@@ -192,8 +158,7 @@ Esse projeto foi desenvolvido usando os seguintes pacotes:
     K. Rodar o comando: yarn
     L. Instalar a extensão: ESLint
     M. Abrir (CMD+SHIFT+P): Preferences: Open Settings (JSON)
-
-```
+```json
             "eslint.packageManager": "yarn",
             "[javascript]": {
               "editor.codeActionsOnSave": {
@@ -206,10 +171,8 @@ Esse projeto foi desenvolvido usando os seguintes pacotes:
               }
           }
 ```
-
     N. Abrir o arquivo .eslintrc.js e adicionar as linhas abaixo:
-
-```
+```json
           rules: {
             'class-methods-use-this': 'off',
             'no-param-reassign': 'off',
@@ -217,10 +180,8 @@ Esse projeto foi desenvolvido usando os seguintes pacotes:
             'no-unused-vars': ['error', { 'argsIgnorePattern': 'next' }],
         },
 ```
-
     O. Caso não funcione, tente adicionar as linhas abaixo .eslintrc.js, salvar e remover logo em seguinda
-
-```
+```json
         settings: {
             "import/resolver": {
                 "babel-plugin-root-import": {
@@ -229,12 +190,10 @@ Esse projeto foi desenvolvido usando os seguintes pacotes:
             },
         },
 ```
-
 ###### PRETTIER
     1. yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
     2. Alterar .eslintrc.js (sendo que o 'airbnb-base' já deve estar adicionado no extends):
-
-```
+```json
             extends: [
                 'airbnb-base',
                 'prettier'
@@ -247,22 +206,17 @@ Esse projeto foi desenvolvido usando os seguintes pacotes:
                 (...),
             }
 ```
-
     3. Criar o arquivo .prettierrc na raíz do projeto:
-
-```
+```json
         {
             "singleQuote": true,
             "trailingComma": "es5"
         }
 ```
-
 *Rodar para padronizar/corrigir todos os arquivos:
-
 ```
     yarn eslint --fix src --ext .js
 ```
-
 ###### SEQUELIZE
     1. Adicionar os pacotes
         yarn add sequelize
