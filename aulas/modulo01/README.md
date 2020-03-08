@@ -2,9 +2,7 @@
     Configuração do Ambiente de Desenvolvimento
 </h1>
 
-<p>
 O texto abaixo tem como objetivo de documentar os passos iniciais de configuração do ambiente de desenvolvimento aplicado no [RocketSeat GoStack Bootcamp](https://rocketseat.com.br/bootcamp).
-</p>
 
 <p align="center">
     <img alt="License" src="https://img.shields.io/badge/made%20by-danilosalvador-blue">
@@ -19,20 +17,16 @@ O texto abaixo tem como objetivo de documentar os passos iniciais de configuraç
 
 ###### VS Code
     1. Tema: Dracula Official (adicionar pelas Extensions do VSCode)
-
     2. Fonte: 
         Fira Code (https://github.com/tonsky/FiraCode), 
         Procurar por Solution e fazer o Download e instalar os arquivos TTF
-
     3. Ícones: Material Icon Theme (adicionar pelas Extensions)
     4. Cores nos códigos hexadecimais: Color Highlight (adicionar pelas Extensions do VSCode)
-
     5. Outros plugins (adicionar pelas Extensions do VSCode): 
         Rocketseat ReactJS
         Rocketseat React Native
-
     6. Abrir o settings do VS Code, editar o arquivo JSON e adicionar:
-```
+```json
         {
             "dart.flutterSdkPath": "/Users/danilosalvador/Library/Developer/flutter",
             "workbench.iconTheme": "material-icon-theme",
@@ -60,16 +54,13 @@ O texto abaixo tem como objetivo de documentar os passos iniciais de configuraç
     1. Tema: 
         Acessar https://draculatheme.com/ e fazer o download do Terminal.app;
         Importar e mudar nas preferencias do Terminal
-
     2. Mudar a fonte do tema instalado para o Fira Code
-
     3. Instalar Oh My Ash? http://ohmyz.sh/
-
     4. Instalar Spaceship por git clone: https://github.com/denysdovhan/spaceship-prompt
         editar o arquivo .zshrc (arquivo oculto na pasta do usuário) 
         e trocar o tema: ZSH_THEME="spaceship"
         e adicionar as configurações:
-```
+```json
             SPACESHIP_PROMPT_ORDER=(
                 user
                 dir
@@ -88,7 +79,7 @@ O texto abaixo tem como objetivo de documentar os passos iniciais de configuraç
 ```
     5. Instalação do plugin: https://github.com/zdharma/zinit
         Editar o arquivo .zshrc (arquivo oculto na pasta do usuário) 
-```
+```json
             zinit light zsh-users/zsh-autosuggestions
             zinit light zsh-users/zsh-completions
             zinit light zdharma/fast-syntax-highlighting
@@ -96,10 +87,9 @@ O texto abaixo tem como objetivo de documentar os passos iniciais de configuraç
     6. Ferramentas
         A. Insomnia: https://insomnia.rest/
         B. DevDocs: https://devdocs.egoist.moe/
-
     7. Terminal do VSCode
         A. Editar o arquivo .zshrc (arquivo oculto na pasta do usuário) 
-```
+```json
             "terminal.integrated.shell.osx": "/bin/zsh"
 ```
         B. Abrir o VSCode por linha de comando (code)
@@ -111,7 +101,6 @@ O texto abaixo tem como objetivo de documentar os passos iniciais de configuraç
 
 ###### NVM
     Para instalação Node.js
-
     1A. Instalação (**MacOS**): https://github.com/nvm-sh/nvm
         A. Por terminal: 
 ```     
@@ -119,8 +108,8 @@ O texto abaixo tem como objetivo de documentar os passos iniciais de configuraç
 ```
         B. Abrir o arquivo de configuração (pasta do usuário): ˜/.zshrc
 ```
-            export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 ```
         C. Instalar o Node.JS por terminal (pegar a última versão no site)
 ```
@@ -158,7 +147,7 @@ O texto abaixo tem como objetivo de documentar os passos iniciais de configuraç
         yarn add nodemon -D
 ```
         5.1 Para iniciar o nodemon, adicionar no arquivo package.json
-```
+```json
             "scripts": {
                 "dev": "nodemon index.js"
             },
