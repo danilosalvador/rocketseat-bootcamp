@@ -11,13 +11,13 @@ O texto abaixo tem como objetivo de documentar os passos iniciais de configuraç
     <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
 </p>
 
-##Anotações
+## Anotações
 
-######  Referências de GitHub
+###### Referências de GitHub
     https://github.com/lukemorales/
     https://github.com/luizbatanero/
 
-######  VS Code
+###### VS Code
     1. Tema: Dracula Official (adicionar pelas Extensions do VSCode)
 
     2. Fonte: 
@@ -32,7 +32,6 @@ O texto abaixo tem como objetivo de documentar os passos iniciais de configuraç
         Rocketseat React Native
 
     6. Abrir o settings do VS Code, editar o arquivo JSON e adicionar:
-
 ```
         {
             "dart.flutterSdkPath": "/Users/danilosalvador/Library/Developer/flutter",
@@ -57,8 +56,7 @@ O texto abaixo tem como objetivo de documentar os passos iniciais de configuraç
             "breadcrumbs.enabled": true
         }
 ```
-
-######  Terminal
+###### Terminal
     1. Tema: 
         Acessar https://draculatheme.com/ e fazer o download do Terminal.app;
         Importar e mudar nas preferencias do Terminal
@@ -71,7 +69,6 @@ O texto abaixo tem como objetivo de documentar os passos iniciais de configuraç
         editar o arquivo .zshrc (arquivo oculto na pasta do usuário) 
         e trocar o tema: ZSH_THEME="spaceship"
         e adicionar as configurações:
-
 ```
             SPACESHIP_PROMPT_ORDER=(
                 user
@@ -89,27 +86,22 @@ O texto abaixo tem como objetivo de documentar os passos iniciais de configuraç
             SPACESHIP_CHAR_SYMBOL="❯"
             SPACESHIP_CHAR_SUFFIX=" "
 ```
-
     5. Instalação do plugin: https://github.com/zdharma/zinit
         Editar o arquivo .zshrc (arquivo oculto na pasta do usuário) 
-
 ```
             zinit light zsh-users/zsh-autosuggestions
             zinit light zsh-users/zsh-completions
             zinit light zdharma/fast-syntax-highlighting
 ```
-
     6. Ferramentas
         A. Insomnia: https://insomnia.rest/
         B. DevDocs: https://devdocs.egoist.moe/
 
     7. Terminal do VSCode
         A. Editar o arquivo .zshrc (arquivo oculto na pasta do usuário) 
-
 ```
             "terminal.integrated.shell.osx": "/bin/zsh"
 ```
-
         B. Abrir o VSCode por linha de comando (code)
             I. Inicia o VsCode
             II. Digita Cmd + Shift + P
@@ -117,87 +109,64 @@ O texto abaixo tem como objetivo de documentar os passos iniciais de configuraç
             IV. Seleciona a opção Shell Command: Install 'code' command in PATH
             V. Fecha o terminal e abrir de novo para aplicar
 
-######  NVM - Instalação de Recursos
+###### NVM
     Para instalação Node.js
 
     1A. Instalação (**MacOS**): https://github.com/nvm-sh/nvm
         A. Por terminal: 
-
 ```     
         curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 ```
-        
         B. Abrir o arquivo de configuração (pasta do usuário): ˜/.zshrc
-
 ```
             export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 ```
-
         C. Instalar o Node.JS por terminal (pegar a última versão no site)
-
 ```
             nvm install 12.14.1
 ```
-
         D. Colocar como versão default
-
 ```
             nvm alias default 12.14.1
 ```
-
     1B. Instalação (**Windows**): https://chocolatey.org/ 
 
-######  YARN 
+###### YARN 
     Instalação de pacotes (igual ao NPM, porém, mais veloz)
-
     1. Instalação: https://legacy.yarnpkg.com/
 
 ##  Principais comandos
     1. Criação do arquivo packget.json
-
 ```
         yarn init -y
 ```
-
     2. Framework do Node.JS
-
 ```
         yarn add express
 ```
-
     3. Para instalação de todas as dependências do projeto (em um projeto já criado)
-
 ```
         yarn install
 ```
-
     4. Rodar o servidor Node
-
 ```
         node index.js
 ```
-
     5. Atualização automática sem precisar reiniciar o Node apenas em modo de desenvolvimento (-D)
-
 ```
         yarn add nodemon -D
 ```
-
         5.1 Para iniciar o nodemon, adicionar no arquivo package.json
-
 ```
             "scripts": {
                 "dev": "nodemon index.js"
             },
 ```
-
         5.2 Para iniciar o projeto, pelo terminal:
-
 ```
             yarn dev
 ```
-
 ## :memo: Licença
 Este projeto está sob a licença MIT. Consulte a [LICENÇA](LICENSE.md) para obter mais informações.
 
